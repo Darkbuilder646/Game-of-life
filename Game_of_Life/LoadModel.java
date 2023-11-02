@@ -20,7 +20,7 @@ public class LoadModel {
 
         if(gridCenterRow < 0 || gridCenterCol < 0 || gridCenterRow + modelSizeRows > game.getRows() || gridCenterCol + modelSizeCols > game.getCols()) {
             this.modelToLoad = null;
-            throw new ModelException("This model is to big for the grid");
+            throw new ModelException("This model is to big for the grid, you need a grid of " + (modelSizeRows+2) + " rows and " + (modelSizeCols+2) + " cols minimal.");
         }
 
         for (int row = 0; row < modelSizeRows; row++) {
