@@ -2,7 +2,7 @@ package Game_of_Life;
 
 import Game_of_Life.Exception.ModelException;
 //Model
-import Game_of_Life.Model.GliderModel;
+import Game_of_Life.Model.Spaceships;
 import Game_of_Life.Model.OscillatorsModel;
 import Game_of_Life.Model.StillLifeModel;
 
@@ -12,7 +12,7 @@ public class Main {
         GameOfLife gameOfLife = new GameOfLife(20, 20);
         
         LoadModel loader = new LoadModel();
-        loader.setModelToLoad(OscillatorsModel.pulsar); //* Choose here the model to load
+        loader.setModelToLoad(Spaceships.glider); //* Choose here the model to load
         
         try {
             loader.load(gameOfLife);
