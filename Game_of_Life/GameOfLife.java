@@ -4,11 +4,13 @@ public class GameOfLife {
     private int[][] gameGrid;
     private int rows;
     private int cols;
+    private int nbrGeneration;
 
     public GameOfLife(int rows, int cols) {
         this.rows = rows;
         this.cols = cols;
         this.gameGrid = new int[rows][cols];
+        this.nbrGeneration = 0;
     }
 
     public void update() {
@@ -37,6 +39,7 @@ public class GameOfLife {
             }
         }
         gameGrid = newGrid;
+        nbrGeneration++;
     }
 
     public int countLiveCellNeighbors(int row, int col) {
@@ -65,7 +68,7 @@ public class GameOfLife {
     public void display() {
         // Todo Show the grid with graphique interface
         // ? For now, I will show in the console
-        DebugConsole.render(gameGrid);
+        DebugConsole.render(gameGrid, nbrGeneration);
     }
 
     // #region //* Getter & Setter

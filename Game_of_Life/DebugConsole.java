@@ -1,7 +1,7 @@
 package Game_of_Life;
 
 public class DebugConsole {
-    public static void render(int[][] grid) {
+    public static void render(int[][] grid, int generation) {
         //Todo Display grid in console with 0 and 1
 
         for (int row = 0; row < grid.length; row++) {
@@ -15,5 +15,6 @@ public class DebugConsole {
             System.out.println();
         }
         System.out.println();
+        System.out.println("Generation n° " + generation);
     }
 }
